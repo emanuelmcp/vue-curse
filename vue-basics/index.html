@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendiendo vue</title>
+</head>
+<body>
+  <div id="myApp">
+    <h1>Frases de batman</h1>
+    <input
+      type="text"
+      v-model="newQuote"
+      v-on:keypress="addQuote">
+    <hr>
+    <ul>
+      <li
+        v-for="({ quotes, author }, index) in quotes"> 
+        {{ index +1 }} : {{ quotes }} - {{ author }}
+      </li>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
