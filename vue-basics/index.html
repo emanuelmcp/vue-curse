@@ -11,12 +11,15 @@
     <input
       type="text"
       v-model="newQuote"
-      v-on:keypress="addQuote">
+      v-on:keypress.enter="addQuote">
     <hr>
     <ul>
       <li
         v-for="({ quotes, author }, index) in quotes"> 
-        {{ index +1 }} : {{ quotes }} - {{ author }}
+        <span>{{ index +1 }} - {{ quotes }}</span>
+         <!--<blockquote v-if="author"> - {{ author }}</blockquote>-->
+         <!--El v-show renderiza pero no se muestra (hace un display:none;)-->
+         <blockquote v-show="author"> - {{ author }}</blockquote>
       </li>
     </ul>
   </div>
