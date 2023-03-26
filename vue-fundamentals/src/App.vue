@@ -1,14 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <MyCounterVue />
-  <MyCounterVue title="Salieron" />
+  <IndecisionComponentVue />
 </template>
 
 <script>
-import MyCounterVue from "./components/MyCounter.vue";
+import IndecisionComponentVue from "./components/IndecisionComponent.vue";
 export default {
   name: "App",
-  components: { MyCounterVue },
+  components: { IndecisionComponentVue },
 };
 </script>
 
